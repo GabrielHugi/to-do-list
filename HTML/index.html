@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Add new item</h1>
+    <input onkeydown="addToDo(event)" type="text" id="newItem" placeholder="Task..." style="text-align: center; margin-left: 35%; margin-right: 35%; min-width: 30%;">
+    <div style="display: inline-flex; width: 100%;">
+        <div id="to-do" class="mainContentBoxes">
+            <ul id="to-do-list" class="to-do-list">
+            </ul>
+        </div>
+        <div id="doing" class="mainContentBoxes">
+            <ul id="doing-list" class="to-do-list">
+            </ul>
+        </div>
+        <div id="done" class="mainContentBoxes">
+            <ul id="done-list" class="to-do-list">
+            </ul>
+        </div>
+    </div>
+
+    <script src="../JS/index.js"></script>
+</body>
+</html>

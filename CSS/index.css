@@ -1,0 +1,11 @@
+
+
+.mainContentBoxes {
+    min-width: 33%;
+    margin: 0.2%;
+    display: flex;
+}
+
+.to-do-list {
+    list-style: none;
+}
