@@ -1,4 +1,4 @@
-<strong>V 1.2 - Actually functional/strong>
+<strong>V 1.2 - Actually functional</strong>
 <p>Changes:</p>
 <ul>
   <li>Fixed a few bugs that would make id's overlap and thus the code not work</li>
