@@ -1,15 +1,22 @@
+body {
+    margin: 0px;
+    background-color: rgb(237, 250, 255);
+    padding: 0px;
+}
+
 .mainContentBoxes {
-    min-width: 32.3%;
-    max-width: 32.3%;
+    min-width: 32%;
+    max-width: 32%;
     margin-top: 0.7%;
-    margin-right: 0.2%;
-    margin-left: 0.3%;
-    display: flexbox;
+    margin-left: 0.85%;
     min-height: 100%;
-    border-radius: 3%;
+    border-radius: 7%;
     border-style: solid;
     border-width: 2px;
     border-color: black;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-top-width: 6px;
 }
 
 input[type="text"] {
@@ -17,10 +24,13 @@ input[type="text"] {
     width: 50%;
     text-align: center;
     margin-left: 25%;
-    margin-right: 25%;
+    margin-right: 0%;
+    padding: 0px;
+    margin-bottom: 0.1;
     border-width: 2px;
     border-radius: 4px;
     background-color: rgb(249, 252, 254);
+    height: 3.2%;
 }
 
 .to-do-list {
@@ -53,22 +63,63 @@ li {
 }
 
 .check {
-    width: 20px;
-    height: 20px;
-    vertical-align: center;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    border-style: solid;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
     border-width: 2px;
     margin-right: 1%;
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(246, 251, 255);
 }
 
 .but {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     vertical-align: middle;
-    border-width: 2px;
+    text-align: center;
     margin-bottom: 0.6%;
     margin-right: 1%;
+    margin-left: 2%;
+    display: table-cell;
+    padding: 0px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(246, 251, 255);
 }
 
-body {
-    overflow: hidden;
+.but:active {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-bottom: 0.6%;
+    margin-right: 1%;
+    display: table-cell;
+    padding: 0px;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(18, 18, 18);
+    background-color: rgb(228, 243, 255);
+}
+
+.expandDiv {
+    padding: 10px;
+    position: fixed;
+    min-height: 400px;
+    min-width: 40%;
+    max-width: 40%;
+    background-color: rgb(255, 152, 112);
+    right: 29.25%;
+    bottom: 30%;
+    border-color: rgb(212, 126, 92);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
 }
