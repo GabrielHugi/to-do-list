@@ -26,6 +26,10 @@ function checkIfEnterKey(event) {
     }
 }
 
+
+
+
+
 function orderToDo() {
     //sort this shet
     var objects = new Array;
@@ -48,31 +52,26 @@ function orderToDo() {
     */
    //test
     var date = new Array;
+    var values;
     for (var i = 0; i < objects.length; i++) {
-        date[i] = objects[i].title;
-        var numdate = date[i].split('');
-        var value = 0;
-        for (var i2 = 15; i2 < aux.length; i2++) {
+        var expendable = objects[i].title;
+        var numdate = expendable.split('');
+        values = "";
+        for (var i2 = 17; i2 < numdate.length; i2++) {
             if (i2 != 21 && i2 != 24) {
-                value += numdate[i2];
+                values += numdate[i2];
             }
         }
-        date[i] = value;
-        console.log("date be like " + date[i]);
+        date[i] = Number(values);
     }
 // test
-
     // mostly working but not for months for wathever reason
-    for (var i = 0; i < date.length - 1; i++) {
-        for (var j = 0; j < date.length - i - 1; j++) {
-            //var date1 = new Date(realdate[j]);
-            //console.log(realdate[j]);
-            //console.log(date1.getTime());
-            //var date2 = new Date(realdate[j+1]);
-            //console.log(realdate[j+1]);
-            //console.log(date2.getTime());
-            //if (date1.getTime() > date2.getTime()) {
-            if (date[i] > date[i+1]) {
+    for (var i = 0; i < date.length; i++) {
+        for (var j = 0; j < (date.length - i - 1); j++) {
+            console.log("bongo");
+            console.log(objects[j].outerHTML);
+            console.log(objects[j+1].outerHTML);
+            if (date[j] > date[j+1]) {
                 var temp = objects[j].outerHTML
                 objects[j].outerHTML = objects[j+1].outerHTML;
                 objects[j + 1].outerHTML = temp;
@@ -81,27 +80,29 @@ function orderToDo() {
                 descriptions[j].outerHTML = descriptions[j+1].outerHTML;
                 descriptions[j+1].outerHTML = temp;
                 // ----
-                temp = realdate[j];
-                realdate[j] = realdate[j + 1];
-                realdate[j + 1] = temp;
+                temp = date[j];
+                date[j] = date[j + 1];
+                date[j + 1] = temp;
+                console.log("bango");
+                console.log(objects[j].outerHTML);
+            console.log(objects[j+1].outerHTML);
             }
         }
-    }
-    // and here ends what had before started
-    for (var i = 0; i < objects.length; i++) {
-        console.log(realdate[i]);
-        console.log(objects[i].title);
-        console.log(objects[i].id);
-    }
-    
+    }    
+    console.log("------");
 }
+
+
+
 
 
 function addToDo(event) {
     if (newElement.value != "" && newElement.value.split('').length <= 22 && newDescription.value.split('').length <= 600) {
+
+        //toDoList.innerHTML
         toDoList.innerHTML += "<li class='toDoLIReference' title='Date to deliver: " + document.getElementById("newDate").value + "' draggable='true' id='li" + toDoAmmount + "'> <img draggable='false' style='width: 32px; height: 32px; vertical-align: middle;' onclick='expand(this, 0)' id='showli" + toDoAmmount + "' src='../IconsAndImages/info.png'> <input type='checkbox' onclick='toMiddle(this)' id='checkbox" + toDoAmmount + "' class = 'check'>" + newElement.value + "</li>" + "<p class='toDoPLIReference'style='display: none;' id = 'lip" + toDoAmmount + "'>" + newDescription.value + "</p>";
         if (document.getElementById("newDate").value == "") {
-            document.getElementById("li" + toDoAmmount).title = "Date to deliver: none";
+            document.getElementById("li" + toDoAmmount).title = "Date to deliver: 9999999999";
         }
         toDoAmmount++;
         newElement.value = "";

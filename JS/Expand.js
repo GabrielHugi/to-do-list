@@ -11,7 +11,12 @@ function expand(object, op) {
         // description
         document.getElementById("descriptionExpanded").innerText = document.getElementById("lip" + idnum).innerText;
         // date
-        document.getElementById("dateToDeliver").innerText = document.getElementById("li" + idnum).title;
+        if(document.getElementById("li" + idnum).title != "Date to deliver: 9999999999") {
+            document.getElementById("dateToDeliver").innerText = document.getElementById("li" + idnum).title;
+        }
+        else {
+            document.getElementById("dateToDeliver").innerText = "Date to deliver: none";
+        }
     }
     if (op == 1) {
         // task
@@ -19,7 +24,12 @@ function expand(object, op) {
         // description
         document.getElementById("descriptionExpanded").innerText = document.getElementById("liip" + idnum).innerText;
         // date
-        document.getElementById("dateToDeliver").innerText = document.getElementById("lii" + idnum).title;
+        if(document.getElementById("li" + idnum).title != "Date to deliver: 9999999999") {
+            document.getElementById("dateToDeliver").innerText = document.getElementById("lii" + idnum).title;
+        }
+        else {
+            document.getElementById("dateToDeliver").innerText = "Date to deliver: none";
+        }
     }
     if (op == 2) {
         // task
@@ -27,7 +37,12 @@ function expand(object, op) {
         // description
         document.getElementById("descriptionExpanded").innerText = document.getElementById("liiip" + idnum).innerText;
         // date
-        document.getElementById("dateToDeliver").innerText = document.getElementById("liii" + idnum).title;
+        if(document.getElementById("li" + idnum).title != "Date to deliver: 9999999999") {
+            document.getElementById("dateToDeliver").innerText = document.getElementById("liii" + idnum).title;
+        }
+        else {
+            document.getElementById("dateToDeliver").innerText = "Date to deliver: none";
+        }
     }
 
 

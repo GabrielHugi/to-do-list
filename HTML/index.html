@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
-    <!-- expanded lil tab you know for see description and shit -->
-    <div id="expanded" style="display: none;">
-        <div class="expandDiv">
-            <h2 style="text-align: center; word-wrap: break-word;" id="taskExpanded">aaa</h2>
-            <hr>
-            <p style="word-wrap: break-word; font-size: 14pt; width: 95%; margin-left: 2.5%;" id="descriptionExpanded">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            <hr>
-            <p style="font-size: 16pt; text-align: center;" id="dateToDeliver">Date to deliver: 2029-10-10</p>
+    <div>
+        <!-- the window that pops up when you click the information "button" (in reality an image) -->
+        <div id="expanded" style="display: none;">
+            <div class="expandDiv">
+                <h2 style="text-align: center; word-wrap: break-word;" id="taskExpanded">aaa</h2>
+                <hr>
+                <p style="word-wrap: break-word; font-size: 14pt; width: 95%; margin-left: 2.5%;" id="descriptionExpanded">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <hr>
+                <p style="font-size: 16pt; text-align: center;" id="dateToDeliver">Date to deliver: 2029-10-10</p>
+            </div>
+            <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: fixed; height: 40px; width: 40px; right: 29.25%; bottom: 65.7%; font-size: 20pt;" class="but">X</button>
         </div>
-        <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: fixed; height: 40px; width: 40px; right: 29.25%; bottom: 65.7%; font-size: 20pt;" class="but">X</button>
     </div>
     <h1 style="text-align: center; margin-top: 1%; height: 3%;" class="changetext">Add new item</h1>
     <div style="display: flex; flex-direction: row;">
