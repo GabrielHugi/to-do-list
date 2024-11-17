@@ -8,26 +8,62 @@
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
-    <h1 style="text-align: center; margin-top: 0px;">Add new item</h1>
-    <input onkeydown="addToDo(event)" type="text" id="newItem" placeholder="Task...">
-    <div id="mainContainer" style="display: inline-flex; width: 100%; height: 86%;">
-        <div id="to-do" class="mainContentBoxes">
+    <div>
+        <!-- the window that pops up when you click the information "button" (in reality an image) -->
+        <div id="expanded" style="display: none;">
+            <div class="expandDiv">
+                <h2 style="text-align: center; word-wrap: break-word;" id="taskExpanded">aaa</h2>
+                <hr>
+                <p style="word-wrap: break-word; font-size: 14pt; width: 95%; margin-left: 2.5%;" id="descriptionExpanded">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <hr>
+                <p style="font-size: 16pt; text-align: center;" id="dateToDeliver">Date to deliver: 2029-10-10</p>
+            </div>
+            <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: fixed; height: 40px; width: 40px; right: 29.25%; bottom: 65.7%; font-size: 20pt;" class="but">X</button>
+        </div>
+    </div>
+    <h1 style="text-align: center; margin-top: 1%; height: 3%;" class="changetext">Add new item</h1>
+    <div style="display: flex; flex-direction: row; width: 60%; margin-left: 23%;">
+        <div style="margin-right: -14%;">
+            <input type="date" id="newDate">
+        </div>
+        <div style="width: 93.5%; margin: 0px;">
+            <input onkeydown="checkIfEnterKey(event)" type="text" id="newItem" placeholder="Task..." class="changetext;" style="min-width: 60%; min-height: 20px; margin-left: 20%;">
+            <input onkeydown="checkIfEnterKey(event)" type="text" id="newDescription" placeholder="Description..." class="changetext" style="min-height: 80px; min-width: 100%;">
+        </div> 
+        <div style="width: 6.5%;">
+            <button class="but" id="submit" style="min-height: 60px; min-width: 100%; margin-left: 10px; margin-top: 35px;" onclick="addToDo(this)">Submit</button>
+        </div>
+    </div>
+    <div id="mainContainer" style="display: inline-flex; width: 100%;">
+        <div id="to-do" class="mainContentBoxes" >
             <h1 class="title">TO DO</h1>
-            <ul id="to-do-list" class="to-do-list">
+            <ul id="to-do-list" class="to-do-list" >
             </ul>
         </div>
-        <div id="doing" class="mainContentBoxes">
+        <div id="doing" class="mainContentBoxes" >
             <h1 class="title">ON GOING</h1>
-            <ul id="doing-list" class="to-do-list">
+            <ul id="doing-list" class="to-do-list" >
             </ul>
         </div>
-        <div id="done" class="mainContentBoxes">
+        <div id="done" class="mainContentBoxes" >
             <h1 class="title">DONE</h1>
             <ul id="done-list" class="to-do-list">
             </ul>
         </div>
     </div>
+    <div id="footer" style="margin-top: 30px;">
+        <footer>
+            <div style="display: inline;">
+
+            </div>
+        </footer>
+    </div>
 
     <script src="../JS/BasicFunctions.js"></script>
+    <script src="../JS/Ordering.js"></script>
+    <!-- On the making (focusing on other simpler stuff first though)
+    <script src="../JS/DragAndDrop.js"></script>
+    -->
+    <script src="../JS/Expand.js"></script>
 </body>
 </html>

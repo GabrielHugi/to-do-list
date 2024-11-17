@@ -1,9 +1,8 @@
-<strong>V 1.2 - Actually functional</strong>
+<strong>V 1.2.1 - Stuff under development</strong>
 <p>Changes:</p>
 <ul>
-  <li>Fixed a few bugs that would make id's overlap and thus the code not work</li>
-  <li>Fixed white space in the right side of the page</li>
-  <li>Added limits to the ammount of items you can add to each box so it can not overflow</li>
+  <li>I am adding sorting based on the date of the task but I am having a little bit of trouble</li>
+  <li>Also made the page scrollable and not fixed height because it was a stupid idea to do otherwise and yet I still did it for some reason </li>
 </ul>
 <p>This project was made in HTML, CSS and JavaScript. It is a simple to do list that has the stages: to do, on going and done.</p>
 <img src="ProjectImage.png">
