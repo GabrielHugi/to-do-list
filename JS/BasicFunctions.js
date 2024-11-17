@@ -16,9 +16,6 @@ Section for fitting the screen properly to the size of the user's screen
 
 -------------------------------------------------------------------------
 */
-
-// calls function resize upon resizing of the screen
-window.addEventListener('resize', resize);
 var screenWidth;
 var screenHeight;
 // calls the function once to set the proper values for the current size of the screen which has not been yet resized
@@ -35,6 +32,8 @@ function resize() {
     doingList.style.minHeight = screenHeight*0.65 + "px";
     doneList.style.minHeight = screenHeight*0.65 + "px";
 }
+// calls function resize upon resizing of the screen
+window.addEventListener('resize', resize);
 
 /*
 -------------------------------------------------------------------------
