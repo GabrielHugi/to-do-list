@@ -9,6 +9,10 @@
 </head>
 <body>
     <div>
+        <!--  -->
+        <div >
+
+        </div>
         <!-- the window that pops up when you click the information "button" (in reality an image) -->
         <div id="expanded" style="display: none;">
             <div class="expandDiv">
@@ -17,38 +21,44 @@
                 <p style="word-wrap: break-word; font-size: 14pt; width: 95%; margin-left: 2.5%;" id="descriptionExpanded">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 <hr>
                 <p style="font-size: 16pt; text-align: center;" id="dateToDeliver">Date to deliver: 2029-10-10</p>
+                <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: fixed; height: 40px; width: 40px; bottom: 69%; right: 30%; font-size: 20pt;" class="but">X</button>
             </div>
-            <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: fixed; height: 40px; width: 40px; right: 29.25%; bottom: 65.7%; font-size: 20pt;" class="but">X</button>
         </div>
     </div>
     <h1 style="text-align: center; margin-top: 1%; height: 3%;" class="changetext">Add new item</h1>
-    <div style="display: flex; flex-direction: row;">
-        <div style="margin-left: 27.4%; margin-right: -17.7%; margin-top: 0.1%;">
+    <div style="display: flex; flex-direction: row; width: 60%; margin-left: 23.5%;">
+        <div style="margin-right: -15.5%; margin-top: 2px;">
             <input type="date" id="newDate">
         </div>
-        <div style="margin-left: -4.5%; width: 60%;">
-            <input onkeydown="checkIfEnterKey(event)" type="text" id="newItem" placeholder="Task..." class="changetext" style="margin-bottom: 10px; min-height: 25px; min-width: 40%; margin-left: 38%;">
-            <input onkeydown="checkIfEnterKey(event)" type="text" id="newDescription" placeholder="Description..." class="changetext" style="min-height: 80px; min-width: 74%;">
+        <div style="width: 93.5%; margin: 0px;">
+            <input onkeydown="checkIfEnterKey(event)" type="text" id="newItem" placeholder="Task..." class="changetext;" style="min-width: 60%; min-height: 20px; margin-left: 20%;">
+            <input onkeydown="checkIfEnterKey(event)" type="text" id="newDescription" placeholder="Description..." class="changetext" style="min-height: 80px; min-width: 100%;">
         </div> 
-        <div>
-            <button class="but" id="submit" style="min-height: 60px; min-width: 60px; margin-top: 83%;" onclick="addToDo(this)">Submit</button>
+        <div style="width: 6.5%;">
+            <button class="but" id="submit" style="min-height: 60px; min-width: 100%; margin-left: 10px; margin-top: 35px;" onclick="addToDo(this)">Submit</button>
         </div>
     </div>
     <div id="mainContainer" style="display: inline-flex; width: 100%;">
         <div id="to-do" class="mainContentBoxes" >
             <h1 class="title">TO DO</h1>
+            <div style="overflow: scroll;">
             <ul id="to-do-list" class="to-do-list" >
             </ul>
+            </div>
         </div>
         <div id="doing" class="mainContentBoxes" >
             <h1 class="title">ON GOING</h1>
+            <div style="overflow: scroll;">
             <ul id="doing-list" class="to-do-list" >
             </ul>
+            </div>
         </div>
         <div id="done" class="mainContentBoxes" >
             <h1 class="title">DONE</h1>
+            <div style="overflow: scroll;">
             <ul id="done-list" class="to-do-list">
             </ul>
+            </div>
         </div>
     </div>
     <div id="footer" style="margin-top: 30px;">
