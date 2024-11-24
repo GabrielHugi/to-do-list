@@ -14,14 +14,16 @@
 
         </div>
         <!-- the window that pops up when you click the information "button" (in reality an image) -->
-        <div id="expanded" style="display: none;">
+        <div id="expanded" style="display: flex;">
             <div class="expandDiv">
-                <h2 style="text-align: center; word-wrap: break-word;" id="taskExpanded">aaa</h2>
+                <span style="display: inline-flex; width: 100%;">
+                    <h2 style="text-align: center; word-wrap: break-word; width: 100%;" id="taskExpanded">aaa</h2>
+                    <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: relative; height: 40px; width: 40px; left: 1%; font-size: 20pt; margin-left: -5%;" class="but">X</button>
+                </span>
                 <hr>
                 <p style="word-wrap: break-word; font-size: 14pt; width: 95%; margin-left: 2.5%;" id="descriptionExpanded">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 <hr>
                 <p style="font-size: 16pt; text-align: center;" id="dateToDeliver">Date to deliver: 2029-10-10</p>
-                <button title='Click to close' id="buttonExpanded" onclick="unExpand()" style="text-align: center; position: fixed; height: 40px; width: 40px; bottom: 69%; right: 30%; font-size: 20pt;" class="but">X</button>
             </div>
         </div>
     </div>
@@ -31,8 +33,8 @@
             <input type="date" id="newDate">
         </div>
         <div style="width: 93.5%; margin: 0px;">
-            <input onkeydown="checkIfEnterKey(event)" type="text" id="newItem" placeholder="Task..." class="changetext;" style="min-width: 60%; min-height: 20px; margin-left: 20%;">
-            <input onkeydown="checkIfEnterKey(event)" type="text" id="newDescription" placeholder="Description..." class="changetext" style="min-height: 80px; min-width: 100%;">
+            <input onkeydown="checkIfEnterKey(event)" type="text" id="newItem" placeholder="Task..." class="changetext;" style="min-width: 60%; min-height: 28px; margin-left: 20%;">
+            <input onkeydown="checkIfEnterKey(event)" type="text" id="newDescription" placeholder="Description..." class="changetext" style="min-height: 80px; min-width: 100%; text-overflow: clip;">
         </div> 
         <div style="width: 6.5%;">
             <button class="but" id="submit" style="min-height: 60px; min-width: 100%; margin-left: 10px; margin-top: 35px;" onclick="addToDo(this)">Submit</button>

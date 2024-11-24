@@ -87,7 +87,7 @@ function addToDo(event) {
     if (newElement.value.split('').length > 22) {
         alert("Task name too long. Max characters: 22");
     }
-    if (newDescription.value.split('').length > 600) {
+    if (newDescription.value.split('').length > 450) {
         alert("Description too long. Max characters: 600");
     }
 }
