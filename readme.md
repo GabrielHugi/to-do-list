@@ -1,4 +1,8 @@
 <strong>V 1.2.1 - Stuff under development</strong>
+
+small note to myself: fix scrollbar showing up where it shouldnt in chrome & edge
+
+
 <p>Changes:</p>
 <ul>
   <li>I am adding sorting based on the date of the task but I am having a little bit of trouble</li>
